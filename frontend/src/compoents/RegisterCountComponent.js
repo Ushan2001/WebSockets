@@ -23,11 +23,14 @@ const RegisterComponent = () => {
       <h3>❤️ WALL OF LOVE</h3>
       <h2>Loved by educators since 2021</h2>
       <div className="flip-display">
-        {registerCount.toString().split("").map((digit, index) => (
-          <div key={index} className="flip-box">
-            <CountUp end={digit} duration={0.01} />
-          </div>
-        ))}
+        {registerCount
+          .toString()
+          .split("")
+          .map((digit, index) => (
+            <div key={index} className="flip-box">
+              <CountUp end={digit} duration={0.01} />
+            </div>
+          ))}
       </div>
       <p className="trusted-label">TRUSTED USERS</p>
     </div>
